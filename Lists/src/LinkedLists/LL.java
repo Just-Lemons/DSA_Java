@@ -25,6 +25,20 @@ public class LL {
         size++;
     }
 
+    //Deleting First
+    public int deleteFirst(){
+        int val = head.value;
+        head = head.next;
+        if(head == null){
+//            return;
+            tail = null;
+        }
+//        SNode temp = head;
+
+        size--;
+        return val;
+    }
+
     //Inserting in the last
     public void insertLast(int value){
         if(tail == null){
@@ -36,6 +50,21 @@ public class LL {
         tail.next = node;
         tail = node;
         size++;
+    }
+
+    //Delete Last
+    public int deleteLast(){
+        int val;
+        Node temp = head;
+
+        while(temp.next.next != null){
+            temp = temp.next;
+        }
+        val = temp.next.value;
+        temp.next = null;
+        size--;
+        tail = temp;
+        return val;
     }
 
     //Insert at position
@@ -76,7 +105,7 @@ public class LL {
     }
 
     //Creating a Node
-    private class Node{
+    public class Node{
         //Values required
         private int value;
         private Node next;

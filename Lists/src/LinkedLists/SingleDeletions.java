@@ -9,14 +9,19 @@ public class SingleDeletions {
         this.size = 0;
     }
 
-    public void deleteFirst(SNode head){
+    public int deleteFirst(SNode head){
+        int val = head.value;
         if(head == null){
-            return;
+//            return;
+            tail = null;
         }
-
-        SNode temp = head;
-        head = temp.next;
+//        SNode temp = head;
+        head = head.next;
+        return val;
     }
+
+
+
 
     public void display(){
         SNode temp = head;

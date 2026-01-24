@@ -25,5 +25,6 @@ public class Main {
 //            advanced.floyd(5);
             System.out.println("Ones and Zeros Pattern : ");
             advanced.ones_zeros(4);
+
     }
 }
