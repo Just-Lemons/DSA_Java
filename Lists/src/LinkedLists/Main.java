@@ -28,6 +28,8 @@ public class Main {
         dl.insertFirst(1);
         dl.insertFirst(2);
         dl.insertFirst(3);
+        dl.insertLast(4);
         dl.display();
+        dl.reverse();
     }
 }
