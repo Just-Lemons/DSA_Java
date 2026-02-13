@@ -1,11 +1,11 @@
 package LinkedLists;
 
-public class DoubleLL {
+public class Circular {
     private Node head;
     private Node tail;
     private int size;
 
-    public DoubleLL(){
+    public Circular(){
         this.size = 0;
     }
 
@@ -26,7 +26,7 @@ public class DoubleLL {
 
     public void insertLast(int value){
         Node node = new Node(value);
-        Node temp = head;
+        DoubleLL.Node temp = head;
 
         if(head == null){
             insertFirst(value);
@@ -72,8 +72,8 @@ public class DoubleLL {
     }
 
     public void display(){
-        Node temp = head;
-        Node last = null;
+       Node temp = head;
+       Node last = null;
         while(temp != null){
             System.out.print(temp.value + " -> ");
             last = temp;
@@ -101,14 +101,14 @@ public class DoubleLL {
 
     public class Node{
         private int value;
-        private Node next;
-        private Node prev;
+        private DoubleLL.Node next;
+        private DoubleLL.Node prev;
 
         public Node(int value){
             this.value = value;
         }
 
-        public Node(int value,Node next,Node prev){
+        public Node(int value, DoubleLL.Node next, DoubleLL.Node prev){
             this.value = value;
             this.next = next;
             this.prev = prev;
